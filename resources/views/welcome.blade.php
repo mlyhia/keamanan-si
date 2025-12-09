@@ -1477,7 +1477,7 @@
                     <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-[#f53003] to-[#ff6b35] dark:from-[#FF4433] dark:to-[#ff6b35] opacity-10 rounded-bl-full"></div>
                     
                     <div class="relative z-10">
-                        <h1 class="mb-3 font-bold text-2xl lg:text-3xl text-gradient">Welcome to Laravel</h1>
+                        <h1 class="mb-3 font-bold text-2xl lg:text-3xl text-gradient">Welcome to Michiko</h1>
                         <p class="mb-4 text-[#706f6c] dark:text-[#A1A09A] text-base">
                             Laravel has an incredibly rich ecosystem. We suggest starting with the following resources to kickstart your development journey.
                         </p>
