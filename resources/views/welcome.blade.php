@@ -3,15 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ config('app.name', 'Mlyhia Anime') }}</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        
-        <!-- Google Fonts untuk tema anime -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -21,19 +18,130 @@
                 /*! tailwindcss v4.0.7 | MIT License | https://tailwindcss.com */
                 @layer theme {
                     :root, :host {
-                        --font-sans: 'Poppins', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
-                        --font-anime: 'Orbitron', sans-serif;
-                        --color-purple-50: oklch(.977 .014 308.299);
-                        --color-purple-100: oklch(.946 .033 307.174);
-                        --color-purple-200: oklch(.902 .063 306.703);
-                        --color-purple-300: oklch(.827 .119 306.383);
-                        --color-purple-400: oklch(.714 .203 305.504);
-                        --color-purple-500: oklch(.627 .265 303.9);
-                        --color-purple-600: oklch(.558 .288 302.321);
-                        --color-purple-700: oklch(.496 .265 301.924);
-                        --color-purple-800: oklch(.438 .218 303.724);
-                        --color-purple-900: oklch(.381 .176 304.987);
-                        --color-purple-950: oklch(.291 .149 302.717);
+                        --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                        --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+                        --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+                        --color-red-50: oklch(.971 .013 17.38);
+                        --color-red-100: oklch(.936 .032 17.717);
+                        --color-red-200: oklch(.885 .062 18.334);
+                        --color-red-300: oklch(.808 .114 19.571);
+                        --color-red-400: oklch(.704 .191 22.216);
+                        --color-red-500: oklch(.637 .237 25.331);
+                        --color-red-600: oklch(.577 .245 27.325);
+                        --color-red-700: oklch(.505 .213 27.518);
+                        --color-red-800: oklch(.444 .177 26.899);
+                        --color-red-900: oklch(.396 .141 25.723);
+                        --color-red-950: oklch(.258 .092 26.042);
+                        --color-orange-50: oklch(.98 .016 73.684);
+                        --color-orange-100: oklch(.954 .038 75.164);
+                        --color-orange-200: oklch(.901 .076 70.697);
+                        --color-orange-300: oklch(.837 .128 66.29);
+                        --color-orange-400: oklch(.75 .183 55.934);
+                        --color-orange-500: oklch(.705 .213 47.604);
+                        --color-orange-600: oklch(.646 .222 41.116);
+                        --color-orange-700: oklch(.553 .195 38.402);
+                        --color-orange-800: oklch(.47 .157 37.304);
+                        --color-orange-900: oklch(.408 .123 38.172);
+                        --color-orange-950: oklch(.266 .079 36.259);
+                        --color-amber-50: oklch(.987 .022 95.277);
+                        --color-amber-100: oklch(.962 .059 95.617);
+                        --color-amber-200: oklch(.924 .12 95.746);
+                        --color-amber-300: oklch(.879 .169 91.605);
+                        --color-amber-400: oklch(.828 .189 84.429);
+                        --color-amber-500: oklch(.769 .188 70.08);
+                        --color-amber-600: oklch(.666 .179 58.318);
+                        --color-amber-700: oklch(.555 .163 48.998);
+                        --color-amber-800: oklch(.473 .137 46.201);
+                        --color-amber-900: oklch(.414 .112 45.904);
+                        --color-amber-950: oklch(.279 .077 45.635);
+                        --color-yellow-50: oklch(.987 .026 102.212);
+                        --color-yellow-100: oklch(.973 .071 103.193);
+                        --color-yellow-200: oklch(.945 .129 101.54);
+                        --color-yellow-300: oklch(.905 .182 98.111);
+                        --color-yellow-400: oklch(.852 .199 91.936);
+                        --color-yellow-500: oklch(.795 .184 86.047);
+                        --color-yellow-600: oklch(.681 .162 75.834);
+                        --color-yellow-700: oklch(.554 .135 66.442);
+                        --color-yellow-800: oklch(.476 .114 61.907);
+                        --color-yellow-900: oklch(.421 .095 57.708);
+                        --color-yellow-950: oklch(.286 .066 53.813);
+                        --color-lime-50: oklch(.986 .031 120.757);
+                        --color-lime-100: oklch(.967 .067 122.328);
+                        --color-lime-200: oklch(.938 .127 124.321);
+                        --color-lime-300: oklch(.897 .196 126.665);
+                        --color-lime-400: oklch(.841 .238 128.85);
+                        --color-lime-500: oklch(.768 .233 130.85);
+                        --color-lime-600: oklch(.648 .2 131.684);
+                        --color-lime-700: oklch(.532 .157 131.589);
+                        --color-lime-800: oklch(.453 .124 130.933);
+                        --color-lime-900: oklch(.405 .101 131.063);
+                        --color-lime-950: oklch(.274 .072 132.109);
+                        --color-green-50: oklch(.982 .018 155.826);
+                        --color-green-100: oklch(.962 .044 156.743);
+                        --color-green-200: oklch(.925 .084 155.995);
+                        --color-green-300: oklch(.871 .15 154.449);
+                        --color-green-400: oklch(.792 .209 151.711);
+                        --color-green-500: oklch(.723 .219 149.579);
+                        --color-green-600: oklch(.627 .194 149.214);
+                        --color-green-700: oklch(.527 .154 150.069);
+                        --color-green-800: oklch(.448 .119 151.328);
+                        --color-green-900: oklch(.393 .095 152.535);
+                        --color-green-950: oklch(.266 .065 152.934);
+                        --color-emerald-50: oklch(.979 .021 166.113);
+                        --color-emerald-100: oklch(.95 .052 163.051);
+                        --color-emerald-200: oklch(.905 .093 164.15);
+                        --color-emerald-300: oklch(.845 .143 164.978);
+                        --color-emerald-400: oklch(.765 .177 163.223);
+                        --color-emerald-500: oklch(.696 .17 162.48);
+                        --color-emerald-600: oklch(.596 .145 163.225);
+                        --color-emerald-700: oklch(.508 .118 165.612);
+                        --color-emerald-800: oklch(.432 .095 166.913);
+                        --color-emerald-900: oklch(.378 .077 168.94);
+                        --color-emerald-950: oklch(.262 .051 172.552);
+                        --color-teal-50: oklch(.984 .014 180.72);
+                        --color-teal-100: oklch(.953 .051 180.801);
+                        --color-teal-200: oklch(.91 .096 180.426);
+                        --color-teal-300: oklch(.855 .138 181.071);
+                        --color-teal-400: oklch(.777 .152 181.912);
+                        --color-teal-500: oklch(.704 .14 182.503);
+                        --color-teal-600: oklch(.6 .118 184.704);
+                        --color-teal-700: oklch(.511 .096 186.391);
+                        --color-teal-800: oklch(.437 .078 188.216);
+                        --color-teal-900: oklch(.386 .063 188.416);
+                        --color-teal-950: oklch(.277 .046 192.524);
+                        --color-cyan-50: oklch(.984 .019 200.873);
+                        --color-cyan-100: oklch(.956 .045 203.388);
+                        --color-cyan-200: oklch(.917 .08 205.041);
+                        --color-cyan-300: oklch(.865 .127 207.078);
+                        --color-cyan-400: oklch(.789 .154 211.53);
+                        --color-cyan-500: oklch(.715 .143 215.221);
+                        --color-cyan-600: oklch(.609 .126 221.723);
+                        --color-cyan-700: oklch(.52 .105 223.128);
+                        --color-cyan-800: oklch(.45 .085 224.283);
+                        --color-cyan-900: oklch(.398 .07 227.392);
+                        --color-cyan-950: oklch(.302 .056 229.695);
+                        --color-sky-50: oklch(.977 .013 236.62);
+                        --color-sky-100: oklch(.951 .026 236.824);
+                        --color-sky-200: oklch(.901 .058 230.902);
+                        --color-sky-300: oklch(.828 .111 230.318);
+                        --color-sky-400: oklch(.746 .16 232.661);
+                        --color-sky-500: oklch(.685 .169 237.323);
+                        --color-sky-600: oklch(.588 .158 241.966);
+                        --color-sky-700: oklch(.5 .134 242.749);
+                        --color-sky-800: oklch(.443 .11 240.79);
+                        --color-sky-900: oklch(.391 .09 240.876);
+                        --color-sky-950: oklch(.293 .066 243.157);
+                        --color-blue-50: oklch(.97 .014 254.604);
+                        --color-blue-100: oklch(.932 .032 255.585);
+                        --color-blue-200: oklch(.882 .059 254.128);
+                        --color-blue-300: oklch(.809 .105 251.813);
+                        --color-blue-400: oklch(.707 .165 254.624);
+                        --color-blue-500: oklch(.623 .214 259.815);
+                        --color-blue-600: oklch(.546 .245 262.881);
+                        --color-blue-700: oklch(.488 .243 264.376);
+                        --color-blue-800: oklch(.424 .199 265.638);
+                        --color-blue-900: oklch(.379 .146 265.522);
+                        --color-blue-950: oklch(.282 .091 267.935);
                         --color-indigo-50: oklch(.962 .018 272.314);
                         --color-indigo-100: oklch(.93 .034 272.788);
                         --color-indigo-200: oklch(.87 .065 274.039);
@@ -56,12 +164,107 @@
                         --color-violet-800: oklch(.432 .232 292.759);
                         --color-violet-900: oklch(.38 .189 293.745);
                         --color-violet-950: oklch(.283 .141 291.089);
+                        --color-purple-50: oklch(.977 .014 308.299);
+                        --color-purple-100: oklch(.946 .033 307.174);
+                        --color-purple-200: oklch(.902 .063 306.703);
+                        --color-purple-300: oklch(.827 .119 306.383);
+                        --color-purple-400: oklch(.714 .203 305.504);
+                        --color-purple-500: oklch(.627 .265 303.9);
+                        --color-purple-600: oklch(.558 .288 302.321);
+                        --color-purple-700: oklch(.496 .265 301.924);
+                        --color-purple-800: oklch(.438 .218 303.724);
+                        --color-purple-900: oklch(.381 .176 304.987);
+                        --color-purple-950: oklch(.291 .149 302.717);
+                        --color-fuchsia-50: oklch(.977 .017 320.058);
+                        --color-fuchsia-100: oklch(.952 .037 318.852);
+                        --color-fuchsia-200: oklch(.903 .076 319.62);
+                        --color-fuchsia-300: oklch(.833 .145 321.434);
+                        --color-fuchsia-400: oklch(.74 .238 322.16);
+                        --color-fuchsia-500: oklch(.667 .295 322.15);
+                        --color-fuchsia-600: oklch(.591 .293 322.896);
+                        --color-fuchsia-700: oklch(.518 .253 323.949);
+                        --color-fuchsia-800: oklch(.452 .211 324.591);
+                        --color-fuchsia-900: oklch(.401 .17 325.612);
+                        --color-fuchsia-950: oklch(.293 .136 325.661);
+                        --color-pink-50: oklch(.971 .014 343.198);
+                        --color-pink-100: oklch(.948 .028 342.258);
+                        --color-pink-200: oklch(.899 .061 343.231);
+                        --color-pink-300: oklch(.823 .12 346.018);
+                        --color-pink-400: oklch(.718 .202 349.761);
+                        --color-pink-500: oklch(.656 .241 354.308);
+                        --color-pink-600: oklch(.592 .249 .584);
+                        --color-pink-700: oklch(.525 .223 3.958);
+                        --color-pink-800: oklch(.459 .187 3.815);
+                        --color-pink-900: oklch(.408 .153 2.432);
+                        --color-pink-950: oklch(.284 .109 3.907);
+                        --color-rose-50: oklch(.969 .015 12.422);
+                        --color-rose-100: oklch(.941 .03 12.58);
+                        --color-rose-200: oklch(.892 .058 10.001);
+                        --color-rose-300: oklch(.81 .117 11.638);
+                        --color-rose-400: oklch(.712 .194 13.428);
+                        --color-rose-500: oklch(.645 .246 16.439);
+                        --color-rose-600: oklch(.586 .253 17.585);
+                        --color-rose-700: oklch(.514 .222 16.935);
+                        --color-rose-800: oklch(.455 .188 13.697);
+                        --color-rose-900: oklch(.41 .159 10.272);
+                        --color-rose-950: oklch(.271 .105 12.094);
+                        --color-slate-50: oklch(.984 .003 247.858);
+                        --color-slate-100: oklch(.968 .007 247.896);
+                        --color-slate-200: oklch(.929 .013 255.508);
+                        --color-slate-300: oklch(.869 .022 252.894);
+                        --color-slate-400: oklch(.704 .04 256.788);
+                        --color-slate-500: oklch(.554 .046 257.417);
+                        --color-slate-600: oklch(.446 .043 257.281);
+                        --color-slate-700: oklch(.372 .044 257.287);
+                        --color-slate-800: oklch(.279 .041 260.031);
+                        --color-slate-900: oklch(.208 .042 265.755);
+                        --color-slate-950: oklch(.129 .042 264.695);
+                        --color-gray-50: oklch(.985 .002 247.839);
+                        --color-gray-100: oklch(.967 .003 264.542);
+                        --color-gray-200: oklch(.928 .006 264.531);
+                        --color-gray-300: oklch(.872 .01 258.338);
+                        --color-gray-400: oklch(.707 .022 261.325);
+                        --color-gray-500: oklch(.551 .027 264.364);
+                        --color-gray-600: oklch(.446 .03 256.802);
+                        --color-gray-700: oklch(.373 .034 259.733);
+                        --color-gray-800: oklch(.278 .033 256.848);
+                        --color-gray-900: oklch(.21 .034 264.665);
+                        --color-gray-950: oklch(.13 .028 261.692);
+                        --color-zinc-50: oklch(.985 0 0);
+                        --color-zinc-100: oklch(.967 .001 286.375);
+                        --color-zinc-200: oklch(.92 .004 286.32);
+                        --color-zinc-300: oklch(.871 .006 286.286);
+                        --color-zinc-400: oklch(.705 .015 286.067);
+                        --color-zinc-500: oklch(.552 .016 285.938);
+                        --color-zinc-600: oklch(.442 .017 285.786);
+                        --color-zinc-700: oklch(.37 .013 285.805);
+                        --color-zinc-800: oklch(.274 .006 286.033);
+                        --color-zinc-900: oklch(.21 .006 285.885);
+                        --color-zinc-950: oklch(.141 .005 285.823);
+                        --color-neutral-50: oklch(.985 0 0);
+                        --color-neutral-100: oklch(.97 0 0);
+                        --color-neutral-200: oklch(.922 0 0);
+                        --color-neutral-300: oklch(.87 0 0);
+                        --color-neutral-400: oklch(.708 0 0);
+                        --color-neutral-500: oklch(.556 0 0);
+                        --color-neutral-600: oklch(.439 0 0);
+                        --color-neutral-700: oklch(.371 0 0);
+                        --color-neutral-800: oklch(.269 0 0);
+                        --color-neutral-900: oklch(.205 0 0);
+                        --color-neutral-950: oklch(.145 0 0);
+                        --color-stone-50: oklch(.985 .001 106.423);
+                        --color-stone-100: oklch(.97 .001 106.424);
+                        --color-stone-200: oklch(.923 .003 48.717);
+                        --color-stone-300: oklch(.869 .005 56.366);
+                        --color-stone-400: oklch(.709 .01 56.259);
+                        --color-stone-500: oklch(.553 .013 58.071);
+                        --color-stone-600: oklch(.444 .011 73.639);
+                        --color-stone-700: oklch(.374 .01 67.558);
+                        --color-stone-800: oklch(.268 .007 34.298);
+                        --color-stone-900: oklch(.216 .006 56.043);
+                        --color-stone-950: oklch(.147 .004 49.25);
                         --color-black: #000;
                         --color-white: #fff;
-                        --color-dark-900: #0a0a0f;
-                        --color-dark-800: #12121a;
-                        --color-dark-700: #1a1a24;
-                        --color-dark-600: #22222e;
                         --spacing: .25rem;
                         --breakpoint-sm: 40rem;
                         --breakpoint-md: 48rem;
@@ -183,6 +386,7 @@
                 }
 
                 @layer base {
+
                     *,
                     :after,
                     :before,
@@ -206,767 +410,1215 @@
                         -moz-tab-size: 4;
                         tab-size: 4;
                         line-height: 1.5;
-                        font-family: var(--default-font-family, 'Poppins', sans-serif);
+                        font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
                         font-feature-settings: var(--default-font-feature-settings, normal);
                         font-variation-settings: var(--default-font-variation-settings, normal);
                         -webkit-tap-highlight-color: transparent
                     }
 
                     body {
-                        line-height: inherit;
-                        background: linear-gradient(135deg, #0a0a0f 0%, #1a1a24 100%);
-                        color: #fff;
-                        min-height: 100vh;
-                        overflow-x: hidden;
+                        line-height: inherit
                     }
 
-                    /* Custom Scrollbar */
-                    ::-webkit-scrollbar {
-                        width: 8px;
+                    hr {
+                        height: 0;
+                        color: inherit;
+                        border-top-width: 1px
                     }
 
-                    ::-webkit-scrollbar-track {
-                        background: rgba(0, 0, 0, 0.2);
+                    abbr:where([title]) {
+                        -webkit-text-decoration: underline dotted;
+                        text-decoration: underline dotted
                     }
 
-                    ::-webkit-scrollbar-thumb {
-                        background: linear-gradient(to bottom, #8b5cf6, #6d28d9);
-                        border-radius: 4px;
+                    h1,
+                    h2,
+                    h3,
+                    h4,
+                    h5,
+                    h6 {
+                        font-size: inherit;
+                        font-weight: inherit
                     }
 
-                    ::-webkit-scrollbar-thumb:hover {
-                        background: linear-gradient(to bottom, #a78bfa, #8b5cf6);
+                    a {
+                        color: inherit;
+                        -webkit-text-decoration: inherit;
+                        text-decoration: inherit
                     }
 
-                    h1, h2, h3, h4, h5, h6 {
-                        font-family: var(--font-anime, 'Orbitron', sans-serif);
-                        font-weight: 700;
-                        letter-spacing: 0.5px;
+                    b,
+                    strong {
+                        font-weight: bolder
                     }
 
-                    /* ... (rest of the base styles remain similar) ... */
-                }
-
-                /* Custom Anime Theme Classes */
-                .anime-gradient-bg {
-                    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a24 30%, #2d1b69 70%, #8b5cf6 100%);
-                }
-
-                .anime-card-gradient {
-                    background: linear-gradient(145deg, rgba(26, 26, 36, 0.9) 0%, rgba(45, 27, 105, 0.8) 100%);
-                    backdrop-filter: blur(10px);
-                    border: 1px solid rgba(139, 92, 246, 0.3);
-                }
-
-                .anime-text-gradient {
-                    background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 50%, #6d28d9 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                }
-
-                .anime-glow {
-                    animation: anime-glow 2s ease-in-out infinite alternate;
-                }
-
-                @keyframes anime-glow {
-                    from {
-                        box-shadow: 0 0 10px rgba(139, 92, 246, 0.5),
-                                    0 0 20px rgba(139, 92, 246, 0.3),
-                                    0 0 30px rgba(139, 92, 246, 0.1);
+                    code,
+                    kbd,
+                    samp,
+                    pre {
+                        font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+                        font-feature-settings: var(--default-mono-font-feature-settings, normal);
+                        font-variation-settings: var(--default-mono-font-variation-settings, normal);
+                        font-size: 1em
                     }
-                    to {
-                        box-shadow: 0 0 15px rgba(139, 92, 246, 0.8),
-                                    0 0 25px rgba(139, 92, 246, 0.5),
-                                    0 0 35px rgba(139, 92, 246, 0.3);
+
+                    small {
+                        font-size: 80%
+                    }
+
+                    sub,
+                    sup {
+                        vertical-align: baseline;
+                        font-size: 75%;
+                        line-height: 0;
+                        position: relative
+                    }
+
+                    sub {
+                        bottom: -.25em
+                    }
+
+                    sup {
+                        top: -.5em
+                    }
+
+                    table {
+                        text-indent: 0;
+                        border-color: inherit;
+                        border-collapse: collapse
+                    }
+
+                    :-moz-focusring {
+                        outline: auto
+                    }
+
+                    progress {
+                        vertical-align: baseline
+                    }
+
+                    summary {
+                        display: list-item
+                    }
+
+                    ol,
+                    ul,
+                    menu {
+                        list-style: none
+                    }
+
+                    img,
+                    svg,
+                    video,
+                    canvas,
+                    audio,
+                    iframe,
+                    embed,
+                    object {
+                        vertical-align: middle;
+                        display: block
+                    }
+
+                    img,
+                    video {
+                        max-width: 100%;
+                        height: auto
+                    }
+
+                    button,
+                    input,
+                    select,
+                    optgroup,
+                    textarea {
+                        font: inherit;
+                        font-feature-settings: inherit;
+                        font-variation-settings: inherit;
+                        letter-spacing: inherit;
+                        color: inherit;
+                        opacity: 1;
+                        background-color: #0000;
+                        border-radius: 0
+                    }
+
+                    ::file-selector-button {
+                        font: inherit;
+                        font-feature-settings: inherit;
+                        font-variation-settings: inherit;
+                        letter-spacing: inherit;
+                        color: inherit;
+                        opacity: 1;
+                        background-color: #0000;
+                        border-radius: 0
+                    }
+
+                    :where(select:is([multiple], [size])) optgroup {
+                        font-weight: bolder
+                    }
+
+                    :where(select:is([multiple], [size])) optgroup option {
+                        padding-inline-start: 20px
+                    }
+
+                    ::file-selector-button {
+                        margin-inline-end: 4px
+                    }
+
+                    ::placeholder {
+                        opacity: 1;
+                        color: color-mix(in oklab, currentColor 50%, transparent)
+                    }
+
+                    textarea {
+                        resize: vertical
+                    }
+
+                    ::-webkit-search-decoration {
+                        -webkit-appearance: none
+                    }
+
+                    ::-webkit-date-and-time-value {
+                        min-height: 1lh;
+                        text-align: inherit
+                    }
+
+                    ::-webkit-datetime-edit {
+                        display: inline-flex
+                    }
+
+                    ::-webkit-datetime-edit-fields-wrapper {
+                        padding: 0
+                    }
+
+                    ::-webkit-datetime-edit {
+                        padding-block: 0
+                    }
+
+                    ::-webkit-datetime-edit-year-field {
+                        padding-block: 0
+                    }
+
+                    ::-webkit-datetime-edit-month-field {
+                        padding-block: 0
+                    }
+
+                    ::-webkit-datetime-edit-day-field {
+                        padding-block: 0
+                    }
+
+                    ::-webkit-datetime-edit-hour-field {
+                        padding-block: 0
+                    }
+
+                    ::-webkit-datetime-edit-minute-field {
+                        padding-block: 0
+                    }
+
+                    ::-webkit-datetime-edit-second-field {
+                        padding-block: 0
+                    }
+
+                    ::-webkit-datetime-edit-millisecond-field {
+                        padding-block: 0
+                    }
+
+                    ::-webkit-datetime-edit-meridiem-field {
+                        padding-block: 0
+                    }
+
+                    :-moz-ui-invalid {
+                        box-shadow: none
+                    }
+
+                    button,
+                    input:where([type=button], [type=reset], [type=submit]) {
+                        -webkit-appearance: button;
+                        -moz-appearance: button;
+                        appearance: button
+                    }
+
+                    ::file-selector-button {
+                        -webkit-appearance: button;
+                        -moz-appearance: button;
+                        appearance: button
+                    }
+
+                    ::-webkit-inner-spin-button {
+                        height: auto
+                    }
+
+                    ::-webkit-outer-spin-button {
+                        height: auto
+                    }
+
+                    [hidden]:where(:not([hidden=until-found])) {
+                        display: none !important
                     }
                 }
 
-                @keyframes float-anime {
-                    0%, 100% { transform: translateY(0px) rotate(0deg); }
-                    50% { transform: translateY(-20px) rotate(5deg); }
-                }
+                @layer components;
 
-                @keyframes sparkle {
-                    0%, 100% { opacity: 0.3; }
-                    50% { opacity: 1; }
-                }
-
-                .float-anime {
-                    animation: float-anime 6s ease-in-out infinite;
-                }
-
-                .sparkle {
-                    animation: sparkle 2s ease-in-out infinite;
-                }
-
-                /* Responsive Adjustments */
-                @media (max-width: 768px) {
-                    .mobile-stack {
-                        flex-direction: column !important;
+                @layer utilities {
+                    /* New Utility Classes Added */
+                    .gradient-bg {
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                     }
-                    
-                    .mobile-full {
-                        width: 100% !important;
-                        max-width: 100% !important;
+
+                    .text-gradient {
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
                     }
-                    
-                    .mobile-text-center {
-                        text-align: center !important;
+
+                    .hover-lift {
+                        transition: transform 0.2s ease, box-shadow 0.2s ease;
                     }
-                    
-                    .mobile-p-4 {
-                        padding: 1rem !important;
+
+                    .hover-lift:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
                     }
-                    
-                    .mobile-mb-4 {
-                        margin-bottom: 1rem !important;
+
+                    .card-hover {
+                        transition: all 0.3s ease;
+                    }
+
+                    .card-hover:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .animate-float {
+                        animation: float 3s ease-in-out infinite;
+                    }
+
+                    @keyframes float {
+                        0%, 100% { transform: translateY(0px); }
+                        50% { transform: translateY(-10px); }
+                    }
+
+                    .animate-glow {
+                        animation: glow 2s ease-in-out infinite alternate;
+                    }
+
+                    @keyframes glow {
+                        from { box-shadow: 0 0 10px rgba(99, 102, 241, 0.5); }
+                        to { box-shadow: 0 0 20px rgba(99, 102, 241, 0.8); }
+                    }
+
+                    .absolute {
+                        position: absolute
+                    }
+
+                    .relative {
+                        position: relative
+                    }
+
+                    .static {
+                        position: static
+                    }
+
+                    .inset-0 {
+                        inset: calc(var(--spacing)*0)
+                    }
+
+                    .-mt-\[4\.9rem\] {
+                        margin-top: -4.9rem
+                    }
+
+                    .-mb-px {
+                        margin-bottom: -1px
+                    }
+
+                    .mb-1 {
+                        margin-bottom: calc(var(--spacing)*1)
+                    }
+
+                    .mb-2 {
+                        margin-bottom: calc(var(--spacing)*2)
+                    }
+
+                    .mb-4 {
+                        margin-bottom: calc(var(--spacing)*4)
+                    }
+
+                    .mb-6 {
+                        margin-bottom: calc(var(--spacing)*6)
+                    }
+
+                    .mb-8 {
+                        margin-bottom: calc(var(--spacing)*8)
+                    }
+
+                    .-ml-8 {
+                        margin-left: calc(var(--spacing)*-8)
+                    }
+
+                    .flex {
+                        display: flex
+                    }
+
+                    .hidden {
+                        display: none
+                    }
+
+                    .inline-block {
+                        display: inline-block
+                    }
+
+                    .inline-flex {
+                        display: inline-flex
+                    }
+
+                    .table {
+                        display: table
+                    }
+
+                    .aspect-\[335\/376\] {
+                        aspect-ratio: 335/376
+                    }
+
+                    .h-1 {
+                        height: calc(var(--spacing)*1)
+                    }
+
+                    .h-1\.5 {
+                        height: calc(var(--spacing)*1.5)
+                    }
+
+                    .h-2 {
+                        height: calc(var(--spacing)*2)
+                    }
+
+                    .h-2\.5 {
+                        height: calc(var(--spacing)*2.5)
+                    }
+
+                    .h-3 {
+                        height: calc(var(--spacing)*3)
+                    }
+
+                    .h-3\.5 {
+                        height: calc(var(--spacing)*3.5)
+                    }
+
+                    .h-14 {
+                        height: calc(var(--spacing)*14)
+                    }
+
+                    .h-14\.5 {
+                        height: calc(var(--spacing)*14.5)
+                    }
+
+                    .min-h-screen {
+                        min-height: 100vh
+                    }
+
+                    .w-1 {
+                        width: calc(var(--spacing)*1)
+                    }
+
+                    .w-1\.5 {
+                        width: calc(var(--spacing)*1.5)
+                    }
+
+                    .w-2 {
+                        width: calc(var(--spacing)*2)
+                    }
+
+                    .w-2\.5 {
+                        width: calc(var(--spacing)*2.5)
+                    }
+
+                    .w-3 {
+                        width: calc(var(--spacing)*3)
+                    }
+
+                    .w-3\.5 {
+                        width: calc(var(--spacing)*3.5)
+                    }
+
+                    .w-\[448px\] {
+                        width: 448px
+                    }
+
+                    .w-full {
+                        width: 100%
+                    }
+
+                    .max-w-\[335px\] {
+                        max-width: 335px
+                    }
+
+                    .max-w-none {
+                        max-width: none
+                    }
+
+                    .flex-1 {
+                        flex: 1
+                    }
+
+                    .shrink-0 {
+                        flex-shrink: 0
+                    }
+
+                    .translate-y-0 {
+                        --tw-translate-y: calc(var(--spacing)*0);
+                        translate: var(--tw-translate-x) var(--tw-translate-y)
+                    }
+
+                    .transform {
+                        transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y)
+                    }
+
+                    .flex-col {
+                        flex-direction: column
+                    }
+
+                    .flex-col-reverse {
+                        flex-direction: column-reverse
+                    }
+
+                    .items-center {
+                        align-items: center
+                    }
+
+                    .justify-center {
+                        justify-content: center
+                    }
+
+                    .justify-end {
+                        justify-content: flex-end
+                    }
+
+                    .gap-3 {
+                        gap: calc(var(--spacing)*3)
+                    }
+
+                    .gap-4 {
+                        gap: calc(var(--spacing)*4)
+                    }
+
+                    :where(.space-x-1>:not(:last-child)) {
+                        --tw-space-x-reverse: 0;
+                        margin-inline-start: calc(calc(var(--spacing)*1)*var(--tw-space-x-reverse));
+                        margin-inline-end: calc(calc(var(--spacing)*1)*calc(1 - var(--tw-space-x-reverse)))
+                    }
+
+                    .overflow-hidden {
+                        overflow: hidden
+                    }
+
+                    .rounded-full {
+                        border-radius: 3.40282e38px
+                    }
+
+                    .rounded-sm {
+                        border-radius: var(--radius-sm)
+                    }
+
+                    .rounded-md {
+                        border-radius: var(--radius-md)
+                    }
+
+                    .rounded-lg {
+                        border-radius: var(--radius-lg)
+                    }
+
+                    .rounded-xl {
+                        border-radius: var(--radius-xl)
+                    }
+
+                    .rounded-t-lg {
+                        border-top-left-radius: var(--radius-lg);
+                        border-top-right-radius: var(--radius-lg)
+                    }
+
+                    .rounded-br-lg {
+                        border-bottom-right-radius: var(--radius-lg)
+                    }
+
+                    .rounded-bl-lg {
+                        border-bottom-left-radius: var(--radius-lg)
+                    }
+
+                    .border {
+                        border-style: var(--tw-border-style);
+                        border-width: 1px
+                    }
+
+                    .border-2 {
+                        border-width: 2px
+                    }
+
+                    .border-\[\#19140035\] {
+                        border-color: #19140035
+                    }
+
+                    .border-\[\#e3e3e0\] {
+                        border-color: #e3e3e0
+                    }
+
+                    .border-black {
+                        border-color: var(--color-black)
+                    }
+
+                    .border-transparent {
+                        border-color: #0000
+                    }
+
+                    .bg-\[\#1b1b18\] {
+                        background-color: #1b1b18
+                    }
+
+                    .bg-\[\#FDFDFC\] {
+                        background-color: #fdfdfc
+                    }
+
+                    .bg-\[\#dbdbd7\] {
+                        background-color: #dbdbd7
+                    }
+
+                    .bg-\[\#fff2f2\] {
+                        background-color: #fff2f2
+                    }
+
+                    .bg-white {
+                        background-color: var(--color-white)
+                    }
+
+                    .p-6 {
+                        padding: calc(var(--spacing)*6)
+                    }
+
+                    .px-5 {
+                        padding-inline: calc(var(--spacing)*5)
+                    }
+
+                    .px-6 {
+                        padding-inline: calc(var(--spacing)*6)
+                    }
+
+                    .py-1 {
+                        padding-block: calc(var(--spacing)*1)
+                    }
+
+                    .py-1\.5 {
+                        padding-block: calc(var(--spacing)*1.5)
+                    }
+
+                    .py-2 {
+                        padding-block: calc(var(--spacing)*2)
+                    }
+
+                    .py-3 {
+                        padding-block: calc(var(--spacing)*3)
+                    }
+
+                    .pb-12 {
+                        padding-bottom: calc(var(--spacing)*12)
+                    }
+
+                    .text-sm {
+                        font-size: var(--text-sm);
+                        line-height: var(--tw-leading, var(--text-sm--line-height))
+                    }
+
+                    .text-base {
+                        font-size: var(--text-base);
+                        line-height: var(--tw-leading, var(--text-base--line-height))
+                    }
+
+                    .text-lg {
+                        font-size: var(--text-lg);
+                        line-height: var(--tw-leading, var(--text-lg--line-height))
+                    }
+
+                    .text-xl {
+                        font-size: var(--text-xl);
+                        line-height: var(--tw-leading, var(--text-xl--line-height))
+                    }
+
+                    .text-2xl {
+                        font-size: var(--text-2xl);
+                        line-height: var(--tw-leading, var(--text-2xl--line-height))
+                    }
+
+                    .text-\[13px\] {
+                        font-size: 13px
+                    }
+
+                    .leading-\[20px\] {
+                        --tw-leading: 20px;
+                        line-height: 20px
+                    }
+
+                    .leading-normal {
+                        --tw-leading: var(--leading-normal);
+                        line-height: var(--leading-normal)
+                    }
+
+                    .font-medium {
+                        --tw-font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-medium)
+                    }
+
+                    .font-semibold {
+                        --tw-font-weight: var(--font-weight-semibold);
+                        font-weight: var(--font-weight-semibold)
+                    }
+
+                    .font-bold {
+                        --tw-font-weight: var(--font-weight-bold);
+                        font-weight: var(--font-weight-bold)
+                    }
+
+                    .text-\[\#1b1b18\] {
+                        color: #1b1b18
+                    }
+
+                    .text-\[\#706f6c\] {
+                        color: #706f6c
+                    }
+
+                    .text-\[\#F53003\],
+                    .text-\[\#f53003\] {
+                        color: #f53003
+                    }
+
+                    .text-white {
+                        color: var(--color-white)
+                    }
+
+                    .underline {
+                        text-decoration-line: underline
+                    }
+
+                    .underline-offset-4 {
+                        text-underline-offset: 4px
+                    }
+
+                    .opacity-100 {
+                        opacity: 1
+                    }
+
+                    .shadow-sm {
+                        --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, #0000001a), 0 1px 2px -1px var(--tw-shadow-color, #0000001a);
+                        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+                    }
+
+                    .shadow-md {
+                        --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, #0000001a), 0 2px 4px -2px var(--tw-shadow-color, #0000001a);
+                        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+                    }
+
+                    .shadow-lg {
+                        --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, #0000001a), 0 4px 6px -4px var(--tw-shadow-color, #0000001a);
+                        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+                    }
+
+                    .shadow-\[0px_0px_1px_0px_rgba\(0\,0\,0\,0\.03\)\,0px_1px_2px_0px_rgba\(0\,0\,0\,0\.06\)\] {
+                        --tw-shadow: 0px 0px 1px 0px var(--tw-shadow-color, #00000008), 0px 1px 2px 0px var(--tw-shadow-color, #0000000f);
+                        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+                    }
+
+                    .shadow-\[inset_0px_0px_0px_1px_rgba\(26\,26\,0\,0\.16\)\] {
+                        --tw-shadow: inset 0px 0px 0px 1px var(--tw-shadow-color, #1a1a0029);
+                        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+                    }
+
+                    .\!filter {
+                        filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, ) !important
+                    }
+
+                    .filter {
+                        filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, )
+                    }
+
+                    .transition-all {
+                        transition-property: all;
+                        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+                        transition-duration: var(--tw-duration, var(--default-transition-duration))
+                    }
+
+                    .transition-transform {
+                        transition-property: transform;
+                        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+                        transition-duration: var(--tw-duration, var(--default-transition-duration))
+                    }
+
+                    .transition-opacity {
+                        transition-property: opacity;
+                        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+                        transition-duration: var(--tw-duration, var(--default-transition-duration))
+                    }
+
+                    .delay-300 {
+                        transition-delay: .3s
+                    }
+
+                    .duration-300 {
+                        --tw-duration: .3s;
+                        transition-duration: .3s
+                    }
+
+                    .duration-750 {
+                        --tw-duration: .75s;
+                        transition-duration: .75s
+                    }
+
+                    .not-has-\[nav\]\:hidden:not(:has(:is(nav))) {
+                        display: none
+                    }
+
+                    .before\:absolute:before {
+                        content: var(--tw-content);
+                        position: absolute
+                    }
+
+                    .before\:top-0:before {
+                        content: var(--tw-content);
+                        top: calc(var(--spacing)*0)
+                    }
+
+                    .before\:top-1\/2:before {
+                        content: var(--tw-content);
+                        top: 50%
+                    }
+
+                    .before\:bottom-0:before {
+                        content: var(--tw-content);
+                        bottom: calc(var(--spacing)*0)
+                    }
+
+                    .before\:bottom-1\/2:before {
+                        content: var(--tw-content);
+                        bottom: 50%
+                    }
+
+                    .before\:left-\[0\.4rem\]:before {
+                        content: var(--tw-content);
+                        left: .4rem
+                    }
+
+                    .before\:border-l:before {
+                        content: var(--tw-content);
+                        border-left-style: var(--tw-border-style);
+                        border-left-width: 1px
+                    }
+
+                    .before\:border-\[\#e3e3e0\]:before {
+                        content: var(--tw-content);
+                        border-color: #e3e3e0
                     }
                 }
 
-                /* Mobile-first responsive utilities */
-                .container-mobile {
-                    width: 100%;
-                    padding-left: 1rem;
-                    padding-right: 1rem;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
+                @media (hover:hover) {
+                    .hover\:border-\[\#1915014a\]:hover {
+                        border-color: #1915014a
+                    }
 
-                @media (min-width: 640px) {
-                    .container-mobile {
-                        max-width: 640px;
+                    .hover\:border-\[\#19140035\]:hover {
+                        border-color: #19140035
+                    }
+
+                    .hover\:border-black:hover {
+                        border-color: var(--color-black)
+                    }
+
+                    .hover\:bg-black:hover {
+                        background-color: var(--color-black)
+                    }
+
+                    .hover\:scale-105:hover {
+                        transform: scale(1.05)
+                    }
+
+                    .hover\:shadow-xl:hover {
+                        --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, #0000001a), 0 8px 10px -6px var(--tw-shadow-color, #0000001a);
+                        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
                     }
                 }
 
-                @media (min-width: 768px) {
-                    .container-mobile {
-                        max-width: 768px;
+                @media (width>=64rem) {
+                    .lg\:-mt-\[6\.6rem\] {
+                        margin-top: -6.6rem
+                    }
+
+                    .lg\:mb-0 {
+                        margin-bottom: calc(var(--spacing)*0)
+                    }
+
+                    .lg\:mb-6 {
+                        margin-bottom: calc(var(--spacing)*6)
+                    }
+
+                    .lg\:-ml-px {
+                        margin-left: -1px
+                    }
+
+                    .lg\:ml-0 {
+                        margin-left: calc(var(--spacing)*0)
+                    }
+
+                    .lg\:block {
+                        display: block
+                    }
+
+                    .lg\:aspect-auto {
+                        aspect-ratio: auto
+                    }
+
+                    .lg\:w-\[438px\] {
+                        width: 438px
+                    }
+
+                    .lg\:max-w-4xl {
+                        max-width: var(--container-4xl)
+                    }
+
+                    .lg\:grow {
+                        flex-grow: 1
+                    }
+
+                    .lg\:flex-row {
+                        flex-direction: row
+                    }
+
+                    .lg\:justify-center {
+                        justify-content: center
+                    }
+
+                    .lg\:rounded-t-none {
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0
+                    }
+
+                    .lg\:rounded-tl-lg {
+                        border-top-left-radius: var(--radius-lg)
+                    }
+
+                    .lg\:rounded-r-lg {
+                        border-top-right-radius: var(--radius-lg);
+                        border-bottom-right-radius: var(--radius-lg)
+                    }
+
+                    .lg\:rounded-br-none {
+                        border-bottom-right-radius: 0
+                    }
+
+                    .lg\:p-8 {
+                        padding: calc(var(--spacing)*8)
+                    }
+
+                    .lg\:p-20 {
+                        padding: calc(var(--spacing)*20)
+                    }
+
+                    .lg\:text-3xl {
+                        font-size: var(--text-3xl);
+                        line-height: var(--tw-leading, var(--text-3xl--line-height))
                     }
                 }
 
-                @media (min-width: 1024px) {
-                    .container-mobile {
-                        max-width: 1024px;
+                @media (prefers-color-scheme:dark) {
+                    .dark\:block {
+                        display: block
+                    }
+
+                    .dark\:hidden {
+                        display: none
+                    }
+
+                    .dark\:border-\[\#3E3E3A\] {
+                        border-color: #3e3e3a
+                    }
+
+                    .dark\:border-\[\#eeeeec\] {
+                        border-color: #eeeeec
+                    }
+
+                    .dark\:bg-\[\#0a0a0a\] {
+                        background-color: #0a0a0a
+                    }
+
+                    .dark\:bg-\[\#1D0002\] {
+                        background-color: #1d0002
+                    }
+
+                    .dark\:bg-\[\#3E3E3A\] {
+                        background-color: #3e3e3a
+                    }
+
+                    .dark\:bg-\[\#161615\] {
+                        background-color: #161615
+                    }
+
+                    .dark\:bg-\[\#eeeeec\] {
+                        background-color: #eeeeec
+                    }
+
+                    .dark\:text-\[\#1C1C1A\] {
+                        color: #1c1c1a
+                    }
+
+                    .dark\:text-\[\#A1A09A\] {
+                        color: #a1a09a
+                    }
+
+                    .dark\:text-\[\#EDEDEC\] {
+                        color: #ededec
+                    }
+
+                    .dark\:text-\[\#F61500\] {
+                        color: #f61500
+                    }
+
+                    .dark\:text-\[\#FF4433\] {
+                        color: #f43
+                    }
+
+                    .dark\:shadow-\[inset_0px_0px_0px_1px_\#fffaed2d\] {
+                        --tw-shadow: inset 0px 0px 0px 1px var(--tw-shadow-color, #fffaed2d);
+                        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+                    }
+
+                    .dark\:before\:border-\[\#3E3E3A\]:before {
+                        content: var(--tw-content);
+                        border-color: #3e3e3a
+                    }
+
+                    @media (hover:hover) {
+                        .dark\:hover\:border-\[\#3E3E3A\]:hover {
+                            border-color: #3e3e3a
+                        }
+
+                        .dark\:hover\:border-\[\#62605b\]:hover {
+                            border-color: #62605b
+                        }
+
+                        .dark\:hover\:border-white:hover {
+                            border-color: var(--color-white)
+                        }
+
+                        .dark\:hover\:bg-white:hover {
+                            background-color: var(--color-white)
+                        }
                     }
                 }
 
-                @media (min-width: 1280px) {
-                    .container-mobile {
-                        max-width: 1280px;
+                @starting-style {
+                    .starting\:translate-y-4 {
+                        --tw-translate-y: calc(var(--spacing)*4);
+                        translate: var(--tw-translate-x) var(--tw-translate-y)
                     }
                 }
 
-                /* Existing utility classes... */
-                .absolute { position: absolute }
-                .relative { position: relative }
-                .fixed { position: fixed }
-                .inset-0 { inset: 0 }
-                .top-0 { top: 0 }
-                .bottom-0 { bottom: 0 }
-                .left-0 { left: 0 }
-                .right-0 { right: 0 }
-                .z-10 { z-index: 10 }
-                .z-20 { z-index: 20 }
-                .z-30 { z-index: 30 }
-                .flex { display: flex }
-                .hidden { display: none }
-                .grid { display: grid }
-                .block { display: block }
-                .inline-block { display: inline-block }
-                .inline-flex { display: inline-flex }
-                .flex-col { flex-direction: column }
-                .flex-row { flex-direction: row }
-                .flex-wrap { flex-wrap: wrap }
-                .items-center { align-items: center }
-                .items-start { align-items: flex-start }
-                .items-end { align-items: flex-end }
-                .justify-center { justify-content: center }
-                .justify-between { justify-content: space-between }
-                .justify-end { justify-content: flex-end }
-                .justify-start { justify-content: flex-start }
-                .w-full { width: 100% }
-                .w-screen { width: 100vw }
-                .h-full { height: 100% }
-                .h-screen { height: 100vh }
-                .min-h-screen { min-height: 100vh }
-                .max-w-full { max-width: 100% }
-                .p-0 { padding: 0 }
-                .p-2 { padding: 0.5rem }
-                .p-4 { padding: 1rem }
-                .p-6 { padding: 1.5rem }
-                .p-8 { padding: 2rem }
-                .px-2 { padding-left: 0.5rem; padding-right: 0.5rem }
-                .px-4 { padding-left: 1rem; padding-right: 1rem }
-                .px-6 { padding-left: 1.5rem; padding-right: 1.5rem }
-                .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem }
-                .py-4 { padding-top: 1rem; padding-bottom: 1rem }
-                .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem }
-                .m-0 { margin: 0 }
-                .m-4 { margin: 1rem }
-                .mt-2 { margin-top: 0.5rem }
-                .mt-4 { margin-top: 1rem }
-                .mt-6 { margin-top: 1.5rem }
-                .mt-8 { margin-top: 2rem }
-                .mb-2 { margin-bottom: 0.5rem }
-                .mb-4 { margin-bottom: 1rem }
-                .mb-6 { margin-bottom: 1.5rem }
-                .mb-8 { margin-bottom: 2rem }
-                .ml-2 { margin-left: 0.5rem }
-                .ml-4 { margin-left: 1rem }
-                .mr-2 { margin-right: 0.5rem }
-                .mr-4 { margin-right: 1rem }
-                .gap-2 { gap: 0.5rem }
-                .gap-4 { gap: 1rem }
-                .gap-6 { gap: 1.5rem }
-                .gap-8 { gap: 2rem }
-                .rounded { border-radius: 0.25rem }
-                .rounded-lg { border-radius: 0.5rem }
-                .rounded-xl { border-radius: 0.75rem }
-                .rounded-2xl { border-radius: 1rem }
-                .rounded-full { border-radius: 9999px }
-                .border { border-width: 1px }
-                .border-2 { border-width: 2px }
-                .border-purple-500 { border-color: #8b5cf6 }
-                .border-purple-600 { border-color: #7c3aed }
-                .border-purple-300 { border-color: #c4b5fd }
-                .border-transparent { border-color: transparent }
-                .bg-black { background-color: #000 }
-                .bg-purple-900 { background-color: #4c1d95 }
-                .bg-purple-800 { background-color: #5b21b6 }
-                .bg-purple-700 { background-color: #6d28d9 }
-                .bg-purple-600 { background-color: #7c3aed }
-                .bg-purple-500 { background-color: #8b5cf6 }
-                .bg-purple-400 { background-color: #a78bfa }
-                .bg-purple-300 { background-color: #c4b5fd }
-                .bg-opacity-50 { background-color: rgba(0,0,0,0.5) }
-                .bg-opacity-80 { background-color: rgba(0,0,0,0.8) }
-                .text-white { color: white }
-                .text-purple-300 { color: #c4b5fd }
-                .text-purple-400 { color: #a78bfa }
-                .text-purple-500 { color: #8b5cf6 }
-                .text-purple-600 { color: #7c3aed }
-                .text-gray-300 { color: #d1d5db }
-                .text-gray-400 { color: #9ca3af }
-                .text-gray-500 { color: #6b7280 }
-                .text-sm { font-size: 0.875rem }
-                .text-base { font-size: 1rem }
-                .text-lg { font-size: 1.125rem }
-                .text-xl { font-size: 1.25rem }
-                .text-2xl { font-size: 1.5rem }
-                .text-3xl { font-size: 1.875rem }
-                .text-4xl { font-size: 2.25rem }
-                .font-light { font-weight: 300 }
-                .font-normal { font-weight: 400 }
-                .font-medium { font-weight: 500 }
-                .font-semibold { font-weight: 600 }
-                .font-bold { font-weight: 700 }
-                .font-extrabold { font-weight: 800 }
-                .text-center { text-align: center }
-                .text-left { text-align: left }
-                .text-right { text-align: right }
-                .leading-tight { line-height: 1.25 }
-                .leading-normal { line-height: 1.5 }
-                .leading-relaxed { line-height: 1.625 }
-                .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05) }
-                .shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06) }
-                .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05) }
-                .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04) }
-                .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25) }
-                .backdrop-blur-sm { backdrop-filter: blur(4px) }
-                .backdrop-blur-md { backdrop-filter: blur(12px) }
-                .backdrop-blur-lg { backdrop-filter: blur(16px) }
-                .overflow-hidden { overflow: hidden }
-                .overflow-y-auto { overflow-y: auto }
-                .transition-all { transition: all 0.3s ease }
-                .transition-transform { transition: transform 0.3s ease }
-                .duration-300 { transition-duration: 0.3s }
-                .duration-500 { transition-duration: 0.5s }
-                .cursor-pointer { cursor: pointer }
-                .hover\:scale-105:hover { transform: scale(1.05) }
-                .hover\:scale-110:hover { transform: scale(1.1) }
-                .hover\:bg-purple-700:hover { background-color: #6d28d9 }
-                .hover\:bg-purple-600:hover { background-color: #7c3aed }
-                .hover\:shadow-2xl:hover { box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.25) }
-                .hover\:text-purple-300:hover { color: #c4b5fd }
-                .hover\:border-purple-400:hover { border-color: #a78bfa }
-                .focus\:outline-none:focus { outline: none }
-                .focus\:ring-2:focus { ring-width: 2px }
-                .focus\:ring-purple-500:focus { ring-color: #8b5cf6 }
-                .focus\:ring-offset-2:focus { ring-offset-width: 2px }
-                .focus\:ring-offset-black:focus { ring-offset-color: #000 }
-                .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) }
-                .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
-                .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) }
-                .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) }
-                .col-span-1 { grid-column: span 1 / span 1 }
-                .col-span-2 { grid-column: span 2 / span 2 }
-                .aspect-square { aspect-ratio: 1 / 1 }
-                .aspect-video { aspect-ratio: 16 / 9 }
-
-                /* Mobile responsive classes */
-                @media (max-width: 768px) {
-                    .mobile\:hidden { display: none }
-                    .mobile\:block { display: block }
-                    .mobile\:flex { display: flex }
-                    .mobile\:flex-col { flex-direction: column }
-                    .mobile\:text-sm { font-size: 0.875rem }
-                    .mobile\:text-base { font-size: 1rem }
-                    .mobile\:text-lg { font-size: 1.125rem }
-                    .mobile\:text-xl { font-size: 1.25rem }
-                    .mobile\:p-2 { padding: 0.5rem }
-                    .mobile\:p-4 { padding: 1rem }
-                    .mobile\:px-2 { padding-left: 0.5rem; padding-right: 0.5rem }
-                    .mobile\:px-4 { padding-left: 1rem; padding-right: 1rem }
-                    .mobile\:py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem }
-                    .mobile\:py-4 { padding-top: 1rem; padding-bottom: 1rem }
-                    .mobile\:mt-2 { margin-top: 0.5rem }
-                    .mobile\:mt-4 { margin-top: 1rem }
-                    .mobile\:mb-2 { margin-bottom: 0.5rem }
-                    .mobile\:mb-4 { margin-bottom: 1rem }
-                    .mobile\:w-full { width: 100% }
-                    .mobile\:text-center { text-align: center }
-                    .mobile\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) }
-                    .mobile\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
-                    .mobile\:gap-2 { gap: 0.5rem }
-                    .mobile\:gap-4 { gap: 1rem }
+                @starting-style {
+                    .starting\:translate-y-6 {
+                        --tw-translate-y: calc(var(--spacing)*6);
+                        translate: var(--tw-translate-x) var(--tw-translate-y)
+                    }
                 }
 
-                @media (min-width: 768px) {
-                    .tablet\:flex { display: flex }
-                    .tablet\:hidden { display: none }
-                    .tablet\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
-                    .tablet\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) }
-                }
-
-                @media (min-width: 1024px) {
-                    .desktop\:flex { display: flex }
-                    .desktop\:hidden { display: none }
-                    .desktop\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) }
+                @starting-style {
+                    .starting\:opacity-0 {
+                        opacity: 0
+                    }
                 }
             </style>
         @endif
     </head>
-    <body class="anime-gradient-bg min-h-screen overflow-x-hidden">
-        <!-- Anime Background Elements -->
-        <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-            <!-- Floating Sakura Petals -->
-            <div class="absolute top-10 left-5 w-6 h-6 bg-pink-500 rounded-full opacity-30 float-anime" style="animation-delay: 0s"></div>
-            <div class="absolute top-20 right-10 w-4 h-4 bg-purple-400 rounded-full opacity-40 float-anime" style="animation-delay: 1s"></div>
-            <div class="absolute bottom-32 left-20 w-5 h-5 bg-purple-300 rounded-full opacity-30 float-anime" style="animation-delay: 2s"></div>
-            <div class="absolute top-40 left-1/4 w-3 h-3 bg-purple-500 rounded-full opacity-50 float-anime" style="animation-delay: 3s"></div>
-            <div class="absolute bottom-20 right-1/3 w-4 h-4 bg-pink-400 rounded-full opacity-40 float-anime" style="animation-delay: 4s"></div>
-            
-            <!-- Glowing Orbs -->
-            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-900 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-900 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-pulse" style="animation-delay: 1s"></div>
-            
-            <!-- Circuit Pattern (Anime Tech Theme) -->
-            <div class="absolute inset-0 opacity-5">
-                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-                <div class="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
-            </div>
+    <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
+        <!-- Animated Background Elements -->
+        <div class="fixed inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
+            <div class="absolute bottom-20 right-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 1s"></div>
+            <div class="absolute top-1/2 left-1/3 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 2s"></div>
         </div>
 
-        <!-- Main Container -->
-        <div class="relative z-10 container-mobile py-6 px-4">
-            <!-- Header Navigation -->
-            <header class="w-full mb-8 md:mb-12">
-                <div class="flex items-center justify-between">
-                    <!-- Logo -->
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center anime-glow">
-                            <i class="fas fa-ghost text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h1 class="text-xl md:text-2xl font-bold anime-text-gradient">Mlyhia</h1>
-                            <p class="text-xs text-purple-400">by Michiko</p>
-                        </div>
-                    </div>
+        <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden relative z-10">
+            @if (Route::has('login'))
+                <nav class="flex items-center justify-end gap-4">
+                    @auth
+                        <a
+                            href="{{ url('/dashboard') }}"
+                            class="inline-flex items-center gap-2 px-5 py-2 dark:text-[#EDEDEC] border-2 border-[#19140035] hover:border-[#1915014a] text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-lg text-sm leading-normal hover-lift transition-all duration-300"
+                        >
+                            <i class="fas fa-tachometer-alt"></i>
+                            Dashboard
+                        </a>
+                    @else
+                        <a
+                            href="{{ route('login') }}"
+                            class="inline-flex items-center gap-2 px-5 py-2 dark:text-[#EDEDEC] text-[#1b1b18] border-2 border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-lg text-sm leading-normal hover-lift transition-all duration-300"
+                        >
+                            <i class="fas fa-sign-in-alt"></i>
+                            Log in
+                        </a>
 
-                    <!-- Navigation -->
-                    @if (Route::has('login'))
-                        <nav class="flex items-center gap-2 md:gap-4">
-                            @auth
-                                <a href="{{ url('/dashboard') }}" 
-                                   class="inline-flex items-center gap-2 px-4 md:px-5 py-2 text-sm text-white bg-purple-800 hover:bg-purple-700 border border-purple-600 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
-                                    <i class="fas fa-tachometer-alt"></i>
-                                    <span class="hidden md:inline">Dashboard</span>
-                                </a>
-                            @else
-                                <a href="{{ route('login') }}" 
-                                   class="inline-flex items-center gap-2 px-4 md:px-5 py-2 text-sm text-purple-300 hover:text-white border border-purple-600 hover:border-purple-400 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
-                                    <i class="fas fa-sign-in-alt"></i>
-                                    <span class="hidden md:inline">Log in</span>
-                                </a>
-
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" 
-                                       class="inline-flex items-center gap-2 px-4 md:px-5 py-2 text-sm text-white bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 rounded-lg border border-purple-500 transition-all duration-300 hover:shadow-xl hover:scale-105">
-                                        <i class="fas fa-user-plus"></i>
-                                        <span class="hidden md:inline">Register</span>
-                                    </a>
-                                @endif
-                            @endauth
-                        </nav>
-                    @endif
-                </div>
-            </header>
-
-            <!-- Main Content -->
-            <main class="flex flex-col lg:flex-row gap-8 items-center justify-center">
+                        @if (Route::has('register'))
+                            <a
+                                href="{{ route('register') }}"
+                                class="inline-flex items-center gap-2 px-5 py-2 dark:text-[#EDEDEC] border-2 border-[#19140035] hover:border-[#1915014a] text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-lg text-sm leading-normal hover-lift transition-all duration-300">
+                                <i class="fas fa-user-plus"></i>
+                                Register
+                            </a>
+                        @endif
+                    @endauth
+                </nav>
+            @endif
+        </header>
+        
+        <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0 relative z-10">
+            <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row card-hover">
                 <!-- Left Content Card -->
-                <div class="anime-card-gradient w-full lg:w-2/3 rounded-2xl p-6 md:p-8 shadow-2xl border border-purple-500/30 backdrop-blur-lg">
-                    <div class="relative">
-                        <!-- Decorative Corner -->
-                        <div class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-purple-500 rounded-tl-lg"></div>
-                        <div class="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-purple-500 rounded-tr-lg"></div>
-                        <div class="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-purple-500 rounded-bl-lg"></div>
-                        <div class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-purple-500 rounded-br-lg"></div>
-
-                        <!-- Content -->
-                        <div class="relative z-10">
-                            <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 anime-text-gradient">
-                                Welcome to <span class="text-white">Mlyhia Anime</span>
-                            </h1>
-                            <p class="text-gray-300 mb-6 md:mb-8 text-base md:text-lg leading-relaxed">
-                                Dive into the ultimate anime experience created by <span class="text-purple-400 font-semibold">Michiko</span>. 
-                                Explore exclusive anime content, connect with fellow otaku, and discover your next favorite series.
-                            </p>
-
-                            <!-- Feature Cards -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
-                                <!-- Feature 1 -->
-                                <div class="bg-black/40 p-4 md:p-6 rounded-xl border border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:shadow-xl hover:scale-105 group">
-                                    <div class="flex items-start gap-4">
-                                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                            <i class="fas fa-play-circle text-xl text-white"></i>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-lg md:text-xl font-bold text-white mb-2">Stream Anime</h3>
-                                            <p class="text-sm text-gray-400 mb-3">
-                                                Unlimited streaming of your favorite anime series in HD quality
-                                            </p>
-                                            <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors">
-                                                Start Watching
-                                                <i class="fas fa-arrow-right text-xs"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Feature 2 -->
-                                <div class="bg-black/40 p-4 md:p-6 rounded-xl border border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:shadow-xl hover:scale-105 group">
-                                    <div class="flex items-start gap-4">
-                                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                            <i class="fas fa-users text-xl text-white"></i>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-lg md:text-xl font-bold text-white mb-2">Anime Community</h3>
-                                            <p class="text-sm text-gray-400 mb-3">
-                                                Connect with fellow anime fans and discuss your favorite series
-                                            </p>
-                                            <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors">
-                                                Join Community
-                                                <i class="fas fa-arrow-right text-xs"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Feature 3 -->
-                                <div class="bg-black/40 p-4 md:p-6 rounded-xl border border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:shadow-xl hover:scale-105 group">
-                                    <div class="flex items-start gap-4">
-                                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                            <i class="fas fa-shopping-bag text-xl text-white"></i>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-lg md:text-xl font-bold text-white mb-2">Anime Merch</h3>
-                                            <p class="text-sm text-gray-400 mb-3">
-                                                Exclusive anime merchandise and collectibles from Michiko
-                                            </p>
-                                            <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors">
-                                                Shop Now
-                                                <i class="fas fa-arrow-right text-xs"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Feature 4 -->
-                                <div class="bg-black/40 p-4 md:p-6 rounded-xl border border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:shadow-xl hover:scale-105 group">
-                                    <div class="flex items-start gap-4">
-                                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                            <i class="fas fa-calendar-alt text-xl text-white"></i>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-lg md:text-xl font-bold text-white mb-2">Events & News</h3>
-                                            <p class="text-sm text-gray-400 mb-3">
-                                                Stay updated with latest anime events and exclusive news
-                                            </p>
-                                            <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors">
-                                                Explore Events
-                                                <i class="fas fa-arrow-right text-xs"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Stats -->
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                                <div class="text-center p-4 bg-black/30 rounded-xl border border-purple-500/20">
-                                    <div class="text-2xl md:text-3xl font-bold text-purple-400 mb-1">10K+</div>
-                                    <div class="text-xs md:text-sm text-gray-400">Anime Series</div>
-                                </div>
-                                <div class="text-center p-4 bg-black/30 rounded-xl border border-purple-500/20">
-                                    <div class="text-2xl md:text-3xl font-bold text-purple-400 mb-1">50K+</div>
-                                    <div class="text-xs md:text-sm text-gray-400">Active Users</div>
-                                </div>
-                                <div class="text-center p-4 bg-black/30 rounded-xl border border-purple-500/20">
-                                    <div class="text-2xl md:text-3xl font-bold text-purple-400 mb-1">500+</div>
-                                    <div class="text-xs md:text-sm text-gray-400">Exclusive Merch</div>
-                                </div>
-                                <div class="text-center p-4 bg-black/30 rounded-xl border border-purple-500/20">
-                                    <div class="text-2xl md:text-3xl font-bold text-purple-400 mb-1">24/7</div>
-                                    <div class="text-xs md:text-sm text-gray-400">Streaming</div>
-                                </div>
-                            </div>
-
-                            <!-- CTA Buttons -->
-                            <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                                <a href="#" 
-                                   class="flex-1 inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 rounded-xl border-2 border-purple-500 text-white text-lg font-bold transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>Start Free Trial</span>
-                                </a>
-                                <a href="#" 
-                                   class="flex-1 inline-flex items-center justify-center gap-3 px-6 py-4 bg-black/50 hover:bg-black/70 border-2 border-purple-500/50 hover:border-purple-400 rounded-xl text-white text-lg font-bold transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                                    <i class="fab fa-discord"></i>
-                                    <span>Join Discord</span>
-                                </a>
-                            </div>
-
-                            <!-- Quick Links -->
-                            <div class="pt-6 border-t border-purple-500/30">
-                                <p class="text-sm text-gray-400 mb-4">Explore More:</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <a href="#" class="text-xs md:text-sm px-3 py-2 bg-black/40 border border-purple-500/30 hover:border-purple-400 rounded-full text-purple-300 hover:text-white transition-all">
-                                        Anime Calendar
-                                    </a>
-                                    <a href="#" class="text-xs md:text-sm px-3 py-2 bg-black/40 border border-purple-500/30 hover:border-purple-400 rounded-full text-purple-300 hover:text-white transition-all">
-                                        Character Database
-                                    </a>
-                                    <a href="#" class="text-xs md:text-sm px-3 py-2 bg-black/40 border border-purple-500/30 hover:border-purple-400 rounded-full text-purple-300 hover:text-white transition-all">
-                                        Voice Actor Info
-                                    </a>
-                                    <a href="#" class="text-xs md:text-sm px-3 py-2 bg-black/40 border border-purple-500/30 hover:border-purple-400 rounded-full text-purple-300 hover:text-white transition-all">
-                                        Fan Art Gallery
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Image/Logo Card -->
-                <div class="w-full lg:w-1/3">
-                    <div class="relative anime-card-gradient rounded-2xl p-6 md:p-8 shadow-2xl border border-purple-500/30 backdrop-blur-lg overflow-hidden">
-                        <!-- Decorative Elements -->
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+                <div class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-8 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-2xl border border-[#e3e3e0] dark:border-[#3E3E3A] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none relative overflow-hidden">
+                    <!-- Decorative Corner Accent -->
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-[#f53003] to-[#ff6b35] dark:from-[#FF4433] dark:to-[#ff6b35] opacity-10 rounded-bl-full"></div>
+                    
+                    <div class="relative z-10">
+                        <h1 class="mb-3 font-bold text-2xl lg:text-3xl text-gradient">Welcome to Mlyhia</h1>
+                        <p class="mb-4 text-[#706f6c] dark:text-[#A1A09A] text-base">
+                            Laravel has an incredibly rich ecosystem. We suggest starting with the following resources to kickstart your development journey.
+                        </p>
                         
-                        <!-- Michiko Signature -->
-                        <div class="absolute top-4 right-4 text-xs text-purple-400 font-bold">
-                            Created by Michiko
-                        </div>
-
-                        <!-- Anime Character Illustration Placeholder -->
-                        <div class="relative h-48 md:h-64 mb-6 rounded-xl overflow-hidden border-2 border-purple-500/50">
-                            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-black/50 flex items-center justify-center">
-                                <div class="text-center">
-                                    <i class="fas fa-user-ninja text-6xl text-purple-400 mb-4"></i>
-                                    <p class="text-sm text-purple-300">Anime Character Art</p>
+                        <!-- Feature Cards -->
+                        <div class="grid grid-cols-1 gap-4 mb-6 lg:mb-8">
+                            <div class="bg-[#FDFDFC] dark:bg-[#1a1a19] p-4 rounded-lg border border-[#e3e3e0] dark:border-[#3E3E3A] hover:shadow-lg transition-all duration-300">
+                                <div class="flex items-start gap-3">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-[#f53003] to-[#ff6b35] flex items-center justify-center">
+                                        <i class="fas fa-book text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-[#1b1b18] dark:text-white mb-1">Documentation</h3>
+                                        <p class="text-sm text-[#706f6c] dark:text-[#A1A09A] mb-2">
+                                            Comprehensive guides and API references
+                                        </p>
+                                        <a href="https://laravel.com/docs" target="_blank" 
+                                           class="inline-flex items-center gap-1 text-sm font-medium text-[#f53003] dark:text-[#FF4433] hover:underline">
+                                            Read Documentation
+                                            <i class="fas fa-arrow-right text-xs"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Sparkle Effects -->
-                            <div class="absolute top-4 left-4 w-2 h-2 bg-white rounded-full sparkle"></div>
-                            <div class="absolute top-8 right-8 w-3 h-3 bg-purple-300 rounded-full sparkle" style="animation-delay: 0.5s"></div>
-                            <div class="absolute bottom-8 left-8 w-2 h-2 bg-pink-400 rounded-full sparkle" style="animation-delay: 1s"></div>
-                        </div>
-
-                        <!-- Platform Logo -->
-                        <div class="text-center mb-6">
-                            <div class="inline-block p-4 rounded-2xl bg-black/50 border border-purple-500/30 mb-4">
-                                <div class="text-4xl md:text-5xl font-bold anime-text-gradient">MLYHIA</div>
-                            </div>
-                            <p class="text-sm text-gray-400">The Ultimate Anime Platform</p>
-                        </div>
-
-                        <!-- Platform Features -->
-                        <div class="space-y-4 mb-6">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center">
-                                    <i class="fas fa-check text-white text-sm"></i>
+                            
+                            <div class="bg-[#FDFDFC] dark:bg-[#1a1a19] p-4 rounded-lg border border-[#e3e3e0] dark:border-[#3E3E3A] hover:shadow-lg transition-all duration-300">
+                                <div class="flex items-start gap-3">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-[#667eea] to-[#764ba2] flex items-center justify-center">
+                                        <i class="fas fa-video text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-[#1b1b18] dark:text-white mb-1">Laracasts</h3>
+                                        <p class="text-sm text-[#706f6c] dark:text-[#A1A09A] mb-2">
+                                            Video tutorials and screencasts
+                                        </p>
+                                        <a href="https://laracasts.com" target="_blank" 
+                                           class="inline-flex items-center gap-1 text-sm font-medium text-[#f53003] dark:text-[#FF4433] hover:underline">
+                                            Watch Tutorials
+                                            <i class="fas fa-arrow-right text-xs"></i>
+                                        </a>
+                                    </div>
                                 </div>
-                                <span class="text-sm text-gray-300">Ad-free Streaming</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center">
-                                    <i class="fas fa-check text-white text-sm"></i>
-                                </div>
-                                <span class="text-sm text-gray-300">Multi-language Subtitles</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center">
-                                    <i class="fas fa-check text-white text-sm"></i>
-                                </div>
-                                <span class="text-sm text-gray-300">Offline Viewing</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center">
-                                    <i class="fas fa-check text-white text-sm"></i>
-                                </div>
-                                <span class="text-sm text-gray-300">Exclusive Content</span>
                             </div>
                         </div>
-
-                        <!-- Download Apps -->
-                        <div class="border-t border-purple-500/30 pt-6">
-                            <p class="text-sm text-gray-400 mb-4">Available on:</p>
-                            <div class="flex gap-3">
-                                <a href="#" class="flex-1 text-center py-2 bg-black/40 border border-purple-500/30 hover:border-purple-400 rounded-lg transition-colors">
-                                    <i class="fab fa-apple text-lg"></i>
-                                    <p class="text-xs mt-1">iOS</p>
-                                </a>
-                                <a href="#" class="flex-1 text-center py-2 bg-black/40 border border-purple-500/30 hover:border-purple-400 rounded-lg transition-colors">
-                                    <i class="fab fa-android text-lg"></i>
-                                    <p class="text-xs mt-1">Android</p>
-                                </a>
-                                <a href="#" class="flex-1 text-center py-2 bg-black/40 border border-purple-500/30 hover:border-purple-400 rounded-lg transition-colors">
-                                    <i class="fas fa-desktop text-lg"></i>
-                                    <p class="text-xs mt-1">Web</p>
-                                </a>
+                        
+                        <!-- Quick Stats -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center p-3 bg-[#FDFDFC] dark:bg-[#1a1a19] rounded-lg border border-[#e3e3e0] dark:border-[#3E3E3A]">
+                                <div class="text-xl font-bold text-[#f53003] dark:text-[#FF4433]">72K+</div>
+                                <div class="text-xs text-[#706f6c] dark:text-[#A1A09A]">GitHub Stars</div>
+                            </div>
+                            <div class="text-center p-3 bg-[#FDFDFC] dark:bg-[#1a1a19] rounded-lg border border-[#e3e3e0] dark:border-[#3E3E3A]">
+                                <div class="text-xl font-bold text-[#f53003] dark:text-[#FF4433]">10M+</div>
+                                <div class="text-xs text-[#706f6c] dark:text-[#A1A09A]">Downloads</div>
                             </div>
                         </div>
-
-                        <!-- Social Links -->
-                        <div class="mt-6 pt-6 border-t border-purple-500/30">
-                            <p class="text-sm text-gray-400 mb-4">Follow Michiko:</p>
-                            <div class="flex justify-center gap-4">
-                                <a href="#" class="w-10 h-10 rounded-full bg-purple-600 hover:bg-purple-700 flex items-center justify-center transition-colors">
-                                    <i class="fab fa-twitter"></i>
+                        
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="https://cloud.laravel.com" target="_blank" 
+                               class="inline-flex items-center justify-center gap-2 dark:bg-gradient-to-r dark:from-[#FF4433] dark:to-[#ff6b35] dark:border-transparent hover:bg-black hover:border-black px-6 py-3 bg-gradient-to-r from-[#1b1b18] to-[#333] rounded-lg border-2 border-black text-white text-sm font-semibold hover-lift transition-all duration-300">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                Deploy Now
+                            </a>
+                            <a href="https://github.com/laravel/laravel" target="_blank"
+                               class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-[#1a1a19] border-2 border-[#e3e3e0] dark:border-[#3E3E3A] rounded-lg text-[#1b1b18] dark:text-white text-sm font-semibold hover:border-[#19140035] dark:hover:border-[#62605b] hover-lift transition-all duration-300">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+                        
+                        <!-- Additional Links -->
+                        <div class="mt-6 pt-6 border-t border-[#e3e3e0] dark:border-[#3E3E3A]">
+                            <p class="text-xs text-[#706f6c] dark:text-[#A1A09A] mb-2">Additional Resources:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="https://laravel-news.com" target="_blank" class="text-xs px-3 py-1 bg-[#FDFDFC] dark:bg-[#1a1a19] border border-[#e3e3e0] dark:border-[#3E3E3A] rounded-full text-[#706f6c] dark:text-[#A1A09A] hover:border-[#19140035] dark:hover:border-[#62605b] transition-colors">
+                                    Laravel News
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-purple-600 hover:bg-purple-700 flex items-center justify-center transition-colors">
-                                    <i class="fab fa-instagram"></i>
+                                <a href="https://laravel.com/docs/billing" target="_blank" class="text-xs px-3 py-1 bg-[#FDFDFC] dark:bg-[#1a1a19] border border-[#e3e3e0] dark:border-[#3E3E3A] rounded-full text-[#706f6c] dark:text-[#A1A09A] hover:border-[#19140035] dark:hover:border-[#62605b] transition-colors">
+                                    Cashier
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-purple-600 hover:bg-purple-700 flex items-center justify-center transition-colors">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-purple-600 hover:bg-purple-700 flex items-center justify-center transition-colors">
-                                    <i class="fab fa-discord"></i>
+                                <a href="https://laravel.com/docs/sanctum" target="_blank" class="text-xs px-3 py-1 bg-[#FDFDFC] dark:bg-[#1a1a19] border border-[#e3e3e0] dark:border-[#3E3E3A] rounded-full text-[#706f6c] dark:text-[#A1A09A] hover:border-[#19140035] dark:hover:border-[#62605b] transition-colors">
+                                    Sanctum
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </main>
-
-            <!-- Footer -->
-            <footer class="mt-8 md:mt-12 pt-8 border-t border-purple-500/30 text-center">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
-                            <i class="fas fa-ghost text-white"></i>
-                        </div>
-                        <span class="text-sm text-gray-400">© {{ date('Y') }} Mlyhia Anime. All rights reserved.</span>
-                    </div>
-                    
-                    <div class="text-sm text-gray-400">
-                        Crafted with <i class="fas fa-heart text-purple-500 mx-1"></i> by Michiko
-                    </div>
-                    
-                    <div class="flex gap-4">
-                        <a href="#" class="text-sm text-gray-400 hover:text-purple-300 transition-colors">Privacy Policy</a>
-                        <a href="#" class="text-sm text-gray-400 hover:text-purple-300 transition-colors">Terms of Service</a>
-                        <a href="#" class="text-sm text-gray-400 hover:text-purple-300 transition-colors">Contact</a>
                     </div>
                 </div>
                 
-                <!-- Mobile App Badges -->
-                <div class="mt-6 md:hidden flex justify-center gap-4">
-                    <a href="#" class="px-4 py-2 bg-black/40 border border-purple-500/30 rounded-lg flex items-center gap-2">
-                        <i class="fab fa-apple"></i>
-                        <span class="text-xs">App Store</span>
-                    </a>
-                    <a href="#" class="px-4 py-2 bg-black/40 border border-purple-500/30 rounded-lg flex items-center gap-2">
-                        <i class="fab fa-google-play"></i>
-                        <span class="text-xs">Play Store</span>
-                    </a>
+                <!-- Right Image/Logo Card -->
+                <div class="bg-gradient-to-br from-[#fff2f2] to-[#ffecec] dark:from-[#1D0002] dark:to-[#2a0005] relative lg:-ml-px -mb-px lg:mb-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg aspect-[335/376] lg:aspect-auto w-full lg:w-[500px] shrink-0 overflow-hidden border border-[#e3e3e0] dark:border-[#3E3E3A] shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-white/10 dark:to-black/20"></div>
+                    
+                    <!-- Laravel Logo Container -->
+                    <div class="relative h-full flex items-center justify-center p-8">
+                        <div class="relative animate-glow">
+                            <svg class="w-full text-[#F53003] dark:text-[#F61500] transition-all translate-y-0 opacity-100 max-w-none duration-750 starting:opacity-0 starting:translate-y-6" viewBox="0 0 438 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.2036 -3H0V102.197H49.5189V86.7187H17.2036V-3Z" fill="currentColor" />
+                                <path d="M110.256 41.6337C108.061 38.1275 104.945 35.3731 100.905 33.3681C96.8667 31.3647 92.8016 30.3618 88.7131 30.3618C83.4247 30.3618 78.5885 31.3389 74.201 33.2923C69.8111 35.2456 66.0474 37.928 62.9059 41.3333C59.7643 44.7401 57.3198 48.6726 55.5754 53.1293C53.8287 57.589 52.9572 62.274 52.9572 67.1813C52.9572 72.1925 53.8287 76.8995 55.5754 81.3069C57.3191 85.7173 59.7636 89.6241 62.9059 93.0293C66.0474 96.4361 69.8119 99.1155 74.201 101.069C78.5885 103.022 83.4247 103.999 88.7131 103.999C92.8016 103.999 96.8667 102.997 100.905 100.994C104.945 98.9911 108.061 96.2359 110.256 92.7282V102.195H126.563V32.1642H110.256V41.6337ZM108.76 75.7472C107.762 78.4531 106.366 80.8078 104.572 82.8112C102.776 84.8161 100.606 86.4183 98.0637 87.6206C95.5202 88.823 92.7004 89.4238 89.6103 89.4238C86.5178 89.4238 83.7252 88.823 81.2324 87.6206C78.7388 86.4183 76.5949 84.8161 74.7998 82.8112C73.004 80.8078 71.6319 78.4531 70.6856 75.7472C69.7356 73.0421 69.2644 70.1868 69.2644 67.1821C69.2644 64.1758 69.7356 61.3205 70.6856 58.6154C71.6319 55.9102 73.004 53.5571 74.7998 51.5522C76.5949 49.5495 78.738 47.9451 81.2324 46.7427C83.7252 45.5404 86.5178 44.9396 89.6103 44.9396C92.7012 44.9396 95.5202 45.5404 98.0637 46.7427C100.606 47.9451 102.776 49.5487 104.572 51.5522C106.367 53.5571 107.762 55.9102 108.76 58.6154C109.756 61.3205 110.256 64.1758 110.256 67.1821C110.256 70.1868 109.756 73.0421 108.76 75.7472Z" fill="currentColor" />
+                                <path d="M242.805 41.6337C240.611 38.1275 237.494 35.3731 233.455 33.3681C229.416 31.3647 225.351 30.3618 221.262 30.3618C215.974 30.3618 211.138 31.3389 206.75 33.2923C202.36 35.2456 198.597 37.928 195.455 41.3333C192.314 44.7401 189.869 48.6726 188.125 53.1293C186.378 57.589 185.507 62.274 185.507 67.1813C185.507 72.1925 186.378 76.8995 188.125 81.3069C189.868 85.7173 192.313 89.6241 195.455 93.0293C198.597 96.4361 202.361 99.1155 206.75 101.069C211.138 103.022 215.974 103.999 221.262 103.999C225.351 103.999 229.416 102.997 233.455 100.994C237.494 98.9911 240.611 96.2359 242.805 92.7282V102.195H259.112V32.1642H242.805V41.6337ZM241.31 75.7472C240.312 78.4531 238.916 80.8078 237.122 82.8112C235.326 84.8161 233.156 86.4183 230.614 87.6206C228.07 88.823 225.251 89.4238 222.16 89.4238C219.068 89.4238 216.275 88.823 213.782 87.6206C211.289 86.4183 209.145 84.8161 207.35 82.8112C205.554 80.8078 204.182 78.4531 203.236 75.7472C202.286 73.0421 201.814 70.1868 201.814 67.1821C201.814 64.1758 202.286 61.3205 203.236 58.6154C204.182 55.9102 205.554 53.5571 207.35 51.5522C209.145 49.5495 211.288 47.9451 213.782 46.7427C216.275 45.5404 219.068 44.9396 222.16 44.9396C225.251 44.9396 228.07 45.5404 230.614 46.7427C233.156 47.9451 235.326 49.5487 237.122 51.5522C238.917 53.5571 240.312 55.9102 241.31 58.6154C242.306 61.3205 242.806 64.1758 242.806 67.1821C242.805 70.1868 242.305 73.0421 241.31 75.7472Z" fill="currentColor" />
+                                <path d="M438 -3H421.694V102.197H438V-3Z" fill="currentColor" />
+                                <path d="M139.43 102.197H155.735V48.2834H183.712V32.1665H139.43V102.197Z" fill="currentColor" />
+                                <path d="M324.49 32.1665L303.995 85.794L283.498 32.1665H266.983L293.748 102.197H314.242L341.006 32.1665H324.49Z" fill="currentColor" />
+                                <path d="M376.571 30.3656C356.603 30.3656 340.797 46.8497 340.797 67.1828C340.797 89.6597 356.094 104 378.661 104C391.29 104 399.354 99.1488 409.206 88.5848L398.189 80.0226C398.183 80.031 389.874 90.9895 377.468 90.9895C363.048 90.9895 356.977 79.3111 356.977 73.269H411.075C413.917 50.1328 398.775 30.3656 376.571 30.3656ZM357.02 61.0967C357.145 59.7487 359.023 43.3761 376.442 43.3761C393.861 43.3761 395.978 59.7464 396.099 61.0967H357.02Z" fill="currentColor" />
+                            </svg>
+                        </div>
+                        
+                        <!-- Decorative Elements Around Logo -->
+                        <div class="absolute top-4 left-4 w-8 h-8 border-2 border-[#f53003]/20 dark:border-[#FF4433]/20 rounded-full animate-spin"></div>
+                        <div class="absolute bottom-4 right-4 w-6 h-6 border-2 border-[#f53003]/20 dark:border-[#FF4433]/20 rounded-full animate-spin" style="animation-duration: 3s"></div>
+                        
+                        <!-- Tagline -->
+                        <div class="absolute bottom-6 left-0 right-0 text-center">
+                            <p class="text-sm font-medium text-[#706f6c] dark:text-[#A1A09A]">
+                                The PHP Framework for Web Artisans
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Dark/Light Mode SVG will be shown based on theme -->
+                    <svg class="w-[448px] max-w-none relative -mt-[4.9rem] -ml-8 lg:ml-0 lg:-mt-[6.6rem] dark:hidden" viewBox="0 0 440 376" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Your existing light mode SVG here -->
+                    </svg>
+
+                    <svg class="w-[448px] max-w-none relative -mt-[4.9rem] -ml-8 lg:ml-0 lg:-mt-[6.6rem] hidden dark:block" viewBox="0 0 440 376" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Your existing dark mode SVG here -->
+                    </svg>
+                    
+                    <div class="absolute inset-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]"></div>
                 </div>
-            </footer>
+            </main>
         </div>
 
-        <!-- Mobile Bottom Navigation -->
-        <div class="fixed bottom-0 left-0 right-0 bg-black/90 backdrop-blur-lg border-t border-purple-500/30 py-3 px-6 z-50 md:hidden">
-            <div class="flex justify-around">
-                <a href="#" class="flex flex-col items-center text-purple-400">
-                    <i class="fas fa-home text-lg"></i>
-                    <span class="text-xs mt-1">Home</span>
-                </a>
-                <a href="#" class="flex flex-col items-center text-gray-400 hover:text-purple-400">
-                    <i class="fas fa-play-circle text-lg"></i>
-                    <span class="text-xs mt-1">Watch</span>
-                </a>
-                <a href="#" class="flex flex-col items-center text-gray-400 hover:text-purple-400">
-                    <i class="fas fa-search text-lg"></i>
-                    <span class="text-xs mt-1">Search</span>
-                </a>
-                <a href="#" class="flex flex-col items-center text-gray-400 hover:text-purple-400">
-                    <i class="fas fa-user text-lg"></i>
-                    <span class="text-xs mt-1">Profile</span>
-                </a>
-            </div>
-        </div>
+        <!-- Footer -->
+        <footer class="mt-8 text-center text-sm text-[#706f6c] dark:text-[#A1A09A] relative z-10">
+            <p class="mb-2">Built with <span class="text-[#f53003] dark:text-[#FF4433]">❤</span> by the Laravel community</p>
+            <p class="text-xs">© {{ date('Y') }} Laravel. All rights reserved.</p>
+        </footer>
 
-        <!-- Mobile Menu Toggle (Hidden on desktop) -->
-        <button id="mobileMenuToggle" class="fixed top-4 left-4 z-50 w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center md:hidden">
-            <i class="fas fa-bars text-white"></i>
-        </button>
-
-        <script>
-            // Simple mobile menu toggle
-            document.getElementById('mobileMenuToggle')?.addEventListener('click', function() {
-                const nav = document.querySelector('nav');
-                if (nav) {
-                    nav.classList.toggle('hidden');
-                    nav.classList.toggle('flex');
-                    nav.classList.toggle('flex-col');
-                    nav.classList.toggle('absolute');
-                    nav.classList.toggle('top-16');
-                    nav.classList.toggle('left-4');
-                    nav.classList.toggle('right-4');
-                    nav.classList.toggle('bg-black/90');
-                    nav.classList.toggle('backdrop-blur-lg');
-                    nav.classList.toggle('p-4');
-                    nav.classList.toggle('rounded-xl');
-                    nav.classList.toggle('border');
-                    nav.classList.toggle('border-purple-500/30');
-                }
-            });
-
-            // Add hover effect for desktop
-            if (window.innerWidth > 768) {
-                document.querySelectorAll('.anime-card-gradient').forEach(card => {
-                    card.addEventListener('mouseenter', () => {
-                        card.style.transform = 'translateY(-5px)';
-                    });
-                    card.addEventListener('mouseleave', () => {
-                        card.style.transform = 'translateY(0)';
-                    });
-                });
-            }
-        </script>
+        @if (Route::has('login'))
+            <div class="h-14.5 hidden lg:block"></div>
+        @endif
     </body>
 </html>
