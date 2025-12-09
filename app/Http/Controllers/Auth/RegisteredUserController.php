@@ -11,13 +11,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
-// Tambah model OTP
-use App\Models\TwoFactorCode;
-
 class RegisteredUserController extends Controller
 {
     /**
-     * Display the registration view.
+     * Tampilkan halaman register.
      */
     public function create()
     {
@@ -25,49 +22,35 @@ class RegisteredUserController extends Controller
     }
 
     /**
-     * Handle an incoming registration request.
+     * Proses register user baru.
      */
     public function store(Request $request): RedirectResponse
     {
-        // Validasi
+        // 1. Validasi input
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        // Simpan user
+        // 2. Simpan user ke database
         $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
+            'name'     => $request->name,
+            'email'    => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
+        // 3. Trigger event Registered (kalau dipakai untuk listener apa pun)
         event(new Registered($user));
 
-        // Login otomatis agar auth()->id() aktif
+        // 4. Login otomatis
         Auth::login($user);
 
-        // ====== GENERATE OTP ======
-        $otp = rand(100000, 999999);
+        // 5. Anggap login pertama sudah lolos 2FA
+        //    supaya middleware '2fa' tidak nendang balik
+        session(['2fa_verified' => true]);
 
-        
-
-
-        TwoFactorCode::updateOrCreate(
-            ['user_id' => auth()->id()],
-            [
-                'code'       => $otp,
-                'expires_at' => now()->addMinutes(5),
-            ]
-        );
-
-        // Simpan status verifikasi
-        session(['2fa_verified' => false]);
-
-        // Redirect ke halaman otp
-        return redirect()->route('2fa.index')
-            ->with('message', 'Kode OTP telah dibuat dan disimpan di database.');
+        // 6. Arahkan ke dashboard
+        return redirect()->route('dashboard');
     }
 }
-
